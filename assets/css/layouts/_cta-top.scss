@@ -1,0 +1,41 @@
+.cta-top-area {
+  color: $white;
+  .section-title {
+    margin-bottom: 0;
+    h4 {
+      font-size: 55px;
+      margin-top: 20px;
+      padding-bottom: 25px;
+      @include max-xs{
+        font-size: 20px;
+        margin-top: 10ox;
+        padding-bottom: 10px;
+      }
+      @include min-sm{
+        line-height: 55px;
+      }
+      @include min-md{
+        font-size: 45px;
+      }
+      @include min-lg{
+        font-size: 35px;
+      }
+      span {
+        display: inline-block;
+        text-transform: uppercase;
+        color: $primary_color;
+        font-size: 50px;
+        font-weight: 900;
+        @include max-xs{
+          font-size: 20px;
+        }
+        @include min-md{
+          font-size: 45px;
+        }
+        @include min-lg{
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}

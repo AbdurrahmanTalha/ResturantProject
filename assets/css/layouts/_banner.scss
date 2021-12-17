@@ -1,0 +1,108 @@
+.banner-area {
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $primary_color;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    z-index: 2;
+    transition: .3s;
+    cursor: pointer;
+    button {
+      background-color: $primary_color;
+    }
+    i {
+      color: $white;
+      font-size: 24px;
+    }
+    &.slick-prev {
+      left: 50px;
+    }
+    &.slick-next {
+      right: 50px;
+    }
+    &:hover {
+      background-color: $black;
+    }
+  }
+  .single-banner {
+    position: relative;
+    height: 100vh;
+    @include max-xs{
+      height: auto;
+      padding: 80px 0 30px
+    }
+    @include min-sm{
+      height: auto;
+      padding: 150px 0 50px
+    }
+    @include min-md{
+      height: 70vh;
+    }
+    @include min-lg{
+      height: 50vh;
+    }
+    .banner-content {
+      height: 100vh;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include max-xs{
+        height: auto;
+      }
+      @include min-sm{
+        height: auto;
+      }
+      @include min-md{
+        height: 70vh;
+      }
+      @include min-lg{
+        height: 50vh;
+      }
+      h5 {
+        font-size: 30px;
+        @include max-xs{
+          font-size: 15px;
+        }
+        @include min-sm{
+          font-size: 20px;
+        }
+      }
+      h2 {
+        font-size: 60px;
+        margin: 30px 0;
+        text-transform: capitalize;
+        font-weight: 800;
+        text-align: center;
+        line-height: 70px;
+        @include max-xs{
+          font-size: 30px;
+          margin: 10px 0;
+          line-height: 35px;
+        }
+        @include min-sm{
+          font-size: 40px;
+          margin: 10px 0;
+        }
+      }
+      .banner-btn{
+          a{
+              margin: 30px 10px 0;
+              @include max-xs{
+                padding: 5px 15px;
+                font-size: 18px;
+                margin: 20px 0 0;
+              }
+              @include min-sm{
+                margin: 10px 0;
+              }
+          }
+      }
+    }
+  }
+}

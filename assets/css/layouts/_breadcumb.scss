@@ -1,0 +1,27 @@
+.breadcumb-area {
+  padding: 150px 0 50px;
+  @include max-xs{
+    padding: 60px 0 30px;
+  }
+  h4 {
+    text-transform: capitalize;
+    color: $white;
+    font-size: 40px;
+  }
+  ul {
+    display: flex;
+    margin-top: 15px;
+    li {
+      color: $white;
+      text-transform: capitalize;
+      margin-right: 10px;
+      a {
+        color: $white;
+        transition: 0.3s;
+        &:hover {
+          color: $primary_color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.team-area {
+  background-color: rgb(24, 26, 27);
+
+  .single-team {
+    position: relative;
+    overflow: hidden;
+    @include max-xs{
+      margin-top: 20px;
+    }
+    @include min-sm{
+      margin-top: 30px;
+    }
+    &:hover {
+      .team-content {
+        bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
+      border: 1px solid $gray;
+      padding: 3px;
+    }
+    .team-content {
+      background-color: $black;
+      position: absolute;
+      bottom: -96px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: $white;
+      transition: 0.3s;
+      h4 {
+        text-transform: capitalize;
+        font-size: 22px;
+        span {
+          display: block;
+          font-size: 16px;
+          text-transform: lowercase;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

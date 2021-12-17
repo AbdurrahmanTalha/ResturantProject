@@ -1,0 +1,127 @@
+.container{
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+}
+
+$grid_columns: 12;
+$grid_xxl_breakpoint: 1400px;
+$grid_xl_breakpoint: 1200px;
+$grid_lg_breakpoint: 992px;
+$grid_md_breakpoint: 768px;
+$grid_sm_breakpoint: 576px;
+
+@media (max-width: $grid_sm_breakpoint) {
+    .container{
+        width: 100%;
+    }
+    .col{
+        width: 100%;
+    }
+}
+
+@media (min-width: $grid_sm_breakpoint) {
+    .container{
+        width: 540px;
+    }
+    .justify-sm-center{
+        justify-content: center;
+    }
+    @for $i from 1 through 12{
+        .col-sm-#{$i}{
+            width: (100 / 12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: $grid_md_breakpoint) {
+    .container{
+        width: 740px;
+    }
+    .justify-md-end{
+        justify-content: flex-end;
+    }
+    @for $i from 1 through 12{
+        .col-md-#{$i}{
+            width: (100 / 12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: $grid_lg_breakpoint) {
+    .container{
+        width: 960px;
+    }
+    @for $i from 1 through 12{
+        .col-lg-#{$i}{
+            width: (100 / 12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: $grid_xl_breakpoint) {
+    .container{
+        width: 1140px;
+    }
+    @for $i from 1 through 12{
+        .col-xl-#{$i}{
+            width: (100 / 12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (min-width: $grid_xxl_breakpoint) {
+    .container{
+        width: 1320px;
+    }
+    @for $i from 1 through 12{
+        .col-xxl-#{$i}{
+            width: (100 / 12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+/* Responsive Mixin */
+@mixin min-xxl{
+    @media (min-width: $grid_xxl_breakpoint) {
+        @content;
+    }
+}
+@mixin min-xl{
+    @media (min-width: $grid_xl_breakpoint) and (max-width:$grid_xxl_breakpoint ) {
+        @content;
+    }
+}
+@mixin min-lg{
+    @media (min-width: $grid_lg_breakpoint) and (max-width:$grid_xl_breakpoint ){
+        @content;
+    }
+}
+
+@mixin min-md{
+    @media (min-width: $grid_md_breakpoint) and (max-width:$grid_lg_breakpoint ){
+        @content;
+    }
+}
+
+@mixin min-sm{
+    @media (min-width: $grid_sm_breakpoint) and (max-width:$grid_md_breakpoint ){
+        @content;
+    }
+}
+
+@mixin max-xs{
+    @media (max-width: $grid_sm_breakpoint ){
+        @content;
+    }
+}

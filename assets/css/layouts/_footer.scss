@@ -1,0 +1,80 @@
+.footer-area {
+  .single-footer {  
+    @include max-xs{
+      margin-top: 10px;
+    }  
+    @include min-sm{
+      margin-top: 20px;
+    }  
+    @include min-md{
+      margin-top: 30px;
+    }
+    @include min-lg{
+      margin-top: 30px;
+    }
+    img {
+      margin-top: 80px;
+      @include max-xs{
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+      @include min-sm{
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    h4 {
+      text-transform: capitalize;
+      color: $white;
+      margin-bottom: 15px;
+    }
+    ul {
+      li {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        color: $white;
+        font-weight: 600;
+        i {
+          margin-right: 8px;
+        }
+        a {
+          color: $white;
+          text-transform: capitalize;
+          transition: 0.3s;
+          font-weight: 600;
+          &:hover {
+            color: $primary_color;
+          }
+        }
+      }
+    }
+  }
+  .footer-social {
+    border-top: 1px solid $gray;
+    margin-top: 20px;
+    padding-top: 20px;
+    @include max-xs{
+      text-align: center;
+    }
+    a {
+      color: #fff;
+      margin-right: 15px;
+      transition: 0.3s;
+      &:hover {
+        color: $primary_color;
+      }
+    }
+  }
+  .footer-copy {
+    text-align: right;
+    border-top: 1px solid $gray;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: $white;
+    @include max-xs{
+      text-align: center;
+    }
+  }
+}

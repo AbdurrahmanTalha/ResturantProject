@@ -1,0 +1,53 @@
+.special-menu-area {
+  background-color: rgb(24, 26, 27);
+  .single-special-menu {
+    position: relative;
+    border: 1px solid $gray;
+    background-color: $white;
+    @include max-xs{
+      margin-top: 20px;
+    }
+    @include min-sm{
+      margin-top: 30px;
+    }
+    @include min-md{
+      margin-top: 30px;
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      background-color: $primary_color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 10px 30px;
+      font-size: 20px;
+    }
+    .special-menu-content {
+      padding: 20px;
+      ul {
+        li {
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+          font-size: 16px;
+          font-weight: 600;
+          span {
+            float: right;
+            color: $primary_color;
+            font-style: italic;
+          }
+          &:last-child {
+            border-top: 1px dashed $black;
+            padding-top: 15px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

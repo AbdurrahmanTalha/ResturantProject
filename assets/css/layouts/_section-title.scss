@@ -1,0 +1,63 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+  span {
+    display: block;
+    font-family: "Oleo Script";
+    text-transform: lowercase;
+    font-size: 22px;
+  }
+  h4 {
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 20px;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: $primary_color;
+      transform: translateX(-50%);
+      left: 50%;
+      height: 2px;
+    }
+    &:before {
+      width: 90px;
+      bottom: 0;
+    }
+    &:after {
+      width: 45px;
+      bottom: -8px;
+    }
+  }
+}
+
+
+.title {
+  margin-bottom: 25px;
+  h4 {
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: $primary_color;
+      bottom: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: $primary_color;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+}
